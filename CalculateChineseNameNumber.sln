@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "UnitTest\UnitTest.vcxproj", "{8154ACD6-5C62-460C-B844-D8A23FE773B2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CalculateChineseNameProcessor", "CalculateChineseNameProcessor\CalculateChineseNameProcessor.vcxproj", "{5502B34F-2CAA-456A-8E66-F1121D42CB52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8154ACD6-5C62-460C-B844-D8A23FE773B2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8154ACD6-5C62-460C-B844-D8A23FE773B2}.Debug|Win32.Build.0 = Debug|Win32
+		{8154ACD6-5C62-460C-B844-D8A23FE773B2}.Release|Win32.ActiveCfg = Release|Win32
+		{8154ACD6-5C62-460C-B844-D8A23FE773B2}.Release|Win32.Build.0 = Release|Win32
+		{5502B34F-2CAA-456A-8E66-F1121D42CB52}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5502B34F-2CAA-456A-8E66-F1121D42CB52}.Debug|Win32.Build.0 = Debug|Win32
+		{5502B34F-2CAA-456A-8E66-F1121D42CB52}.Release|Win32.ActiveCfg = Release|Win32
+		{5502B34F-2CAA-456A-8E66-F1121D42CB52}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
