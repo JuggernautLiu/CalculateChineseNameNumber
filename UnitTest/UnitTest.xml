@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="9" failures="0" disabled="0" errors="0" timestamp="2014-04-15T00:01:14" time="0.035" name="AllTests">
+  <testsuite name="TestDataProducerByCount" tests="1" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="ProduceNameProfiles" status="run" time="0.001" classname="TestDataProducerByCount" />
+  </testsuite>
+  <testsuite name="TestLoadSettings" tests="1" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="TEST_LoadSettings_LoadSettings" status="run" time="0" classname="TestLoadSettings" />
+  </testsuite>
+  <testsuite name="TestNameProfile" tests="5" failures="0" disabled="0" errors="0" time="0.002">
+    <testcase name="LIMIT_Number" status="run" time="0" classname="TestNameProfile" expectedlimit_max="22" expectedlimit_min="1" />
+    <testcase name="LIMIT_Number_Modify" status="run" time="0" classname="TestNameProfile" />
+    <testcase name="SETGETNumber" status="run" time="0" classname="TestNameProfile" />
+    <testcase name="SETGETNumberBoundary" status="run" time="0.001" classname="TestNameProfile" />
+    <testcase name="FinishSetting" status="run" time="0" classname="TestNameProfile" />
+  </testsuite>
+  <testsuite name="TestFilterAllNameNumberForFiveElements" tests="2" failures="0" disabled="0" errors="0" time="0.014">
+    <testcase name="Initialize" status="run" time="0" classname="TestFilterAllNameNumberForFiveElements" />
+    <testcase name="Filter" status="run" time="0" classname="TestFilterAllNameNumberForFiveElements" />
+  </testsuite>
+</testsuites>

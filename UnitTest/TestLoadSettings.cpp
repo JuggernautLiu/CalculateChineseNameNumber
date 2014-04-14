@@ -1,26 +1,30 @@
-#include "stdafx.h"
-#include "TestLoadSettings.h"
+#pragma once
+#include "StdAfx.h"
+#include "gtest/gtest.h"
+#include "gmock/gmock.h"
+#include "ILoadSettings.h"
 
-using namespace std;
-
-TestLoadSettings::TestLoadSettings(void)
+class TestLoadSettings : public ::testing::Test
 {
-}
+protected:
+    // Per-test-case set-up.
+    // Called before the first test in this test case.
+    // Can be omitted if not needed.
+    static void SetUpTestCase() {
+    }
+    // Per-test-case tear-down.
+    // Called after the last test in this test case.
+    // Can be omitted if not needed.
+    static void TearDownTestCase() {
+    }
+    virtual void SetUp(){
+    };
+    virtual void TearDown(){
+    };
+};
 
 
-TestLoadSettings::~TestLoadSettings(void)
-{
-}
-
-void TestLoadSettings::SetUp()
-{
-}
-
-void TestLoadSettings::TearDown()
-{
-}
-
-TEST(TEST_LoadSettings,TEST_LoadSettings_LoadSettings)
+TEST_F(TestLoadSettings,TEST_LoadSettings_LoadSettings)
 {
 	LoadSettingsFromINI setting;
 	
