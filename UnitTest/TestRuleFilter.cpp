@@ -24,6 +24,20 @@ protected:
     };
     virtual void TearDown(){
     };
+	bool isExpectedinResults(vector<NameProfile>& expected, vector<NameProfile>& results){
+		vector<NameProfile>::iterator it;
+	    vector<NameProfile>::iterator expectedIt;
+	    bool isEqual = true;
+		for(expectedIt = expected.begin() ; expectedIt != expected.end(); ++expectedIt){
+		    it = find(results.begin(),results.end(),*expectedIt);
+		    if(it == results.end()){
+		        // Does not exist.
+				isEqual = false;
+		        break;
+	        }
+	    }
+		return isEqual;
+	};
 };
 
 class TestFilterAllNameNumberForFiveElements : public TestRuleFilter
@@ -120,22 +134,14 @@ TEST_F(TestFilterAllNameNumberForFiveElements,Filter)
     bool bfilter = filter.Filter(profileList);
     ASSERT_TRUE(bok);
 
+	vector<NameProfile> expectedVec;
 	NameProfile expectedNameProfile(15);
 	expectedNameProfile.Set_name1_num(10);
 	expectedNameProfile.Set_name2_num(6);
 	expectedNameProfile.FinishSetting();
 
-	vector<NameProfile>::iterator it;
-	it = find(profileList.begin(),profileList.end(),expectedNameProfile);
-
-	if(it != profileList.end()){
-		//found it.
-		EXPECT_TRUE(true);
-	}
-	else{
-		// Does not exist.
-		EXPECT_TRUE(false);
-	}
+	expectedVec.push_back(expectedNameProfile);
+	EXPECT_TRUE(isExpectedinResults(expectedVec,profileList));
 }
 
 TEST_F(TestFilter81GoodNumber,Filter)
@@ -167,29 +173,22 @@ TEST_F(TestFilter81GoodNumber,Filter)
     bool bfilter = filter.Filter(profileList);
     ASSERT_TRUE(bok);
 
+	//Expected samples
+	vector<NameProfile> expectedVec;
 	NameProfile expectedNameProfile(15);
 	expectedNameProfile.Set_name1_num(10);
 	expectedNameProfile.Set_name2_num(6);
 	expectedNameProfile.FinishSetting();
+	expectedVec.push_back(expectedNameProfile);
 
-	vector<NameProfile>::iterator it;
-	it = find(profileList.begin(),profileList.end(),expectedNameProfile);
-
-	if(it != profileList.end()){
-		//found it.
-		EXPECT_TRUE(true);
-	}
-	else{
-		// Does not exist.
-		EXPECT_TRUE(false);
-	}
+	EXPECT_TRUE(isExpectedinResults(expectedVec,profileList));
 }
 
 TEST_F(TestFilterThreeWordsPhase,Filter)
 {
 	FilterThreeWordsPhase filter;
     bool bok = filter.Initialize();
-    ASSERT_TRUE(bok);
+    EXPECT_TRUE(bok);
 	
     vector<NameProfile> profileList;
 	// add data
@@ -212,8 +211,9 @@ TEST_F(TestFilterThreeWordsPhase,Filter)
 	profileList.push_back(temp2);
 	profileList.push_back(temp3);
     bool bfilter = filter.Filter(profileList);
-    ASSERT_TRUE(bok);
+    EXPECT_TRUE(bok);
 
+	//Expected samples
 	vector<NameProfile> expectedVec;
 	NameProfile expectedNameProfile(15);
 	expectedNameProfile.Set_name1_num(10);
@@ -228,17 +228,5 @@ TEST_F(TestFilterThreeWordsPhase,Filter)
 	expectedVec.push_back(expectedNameProfile);
 	expectedVec.push_back(expectedNameProfile2);
 
-	vector<NameProfile>::iterator it;
-	vector<NameProfile>::iterator expectedIt;
-	for(expectedIt = expectedVec.begin() ; expectedIt != expectedVec.end(); ++expectedIt){
-		it = find(profileList.begin(),profileList.end(),*expectedIt);
-		if(it != profileList.end()){
-		    //found it.
-		    EXPECT_TRUE(true);
-	    }
-	    else{
-		    // Does not exist.
-		    EXPECT_TRUE(false);
-	    }
-	}	
+	EXPECT_TRUE(isExpectedinResults(expectedVec,profileList));	
 }
