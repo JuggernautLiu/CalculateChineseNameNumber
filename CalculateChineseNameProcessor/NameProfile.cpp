@@ -17,6 +17,26 @@ NameProfile::~NameProfile(void)
     isSet = false;
 }
 
+bool NameProfile::operator==(const NameProfile& rhs) const
+{
+	if(this == &rhs)
+		return true;
+
+	if((this->lastname_num == rhs.lastname_num) && 
+		(this->name1_num == rhs.name1_num) &&
+		(this->name2_num == rhs.name2_num)){
+			return true;
+	}
+	else{
+		return false;
+	}	
+}
+
+bool NameProfile::operator!=(const NameProfile& rhs) const
+{
+	return !(*this == rhs);
+}
+
 bool NameProfile::FinishSetting()
 {
     bool isok = false;
@@ -63,7 +83,7 @@ void NameProfile::Set_name2_num(int num)
 }
 
 void NameProfile::Cal_allSumNum()
-{    
+{	
     this->sum_num = (this->lastname_num + this->name1_num + this->name2_num);
 }
 

@@ -79,17 +79,21 @@
     <ClInclude Include="IDataProducer.h" />
     <ClInclude Include="ILoadSettings.h" />
     <ClInclude Include="IRuleFilter.h" />
+    <ClInclude Include="MainProcessor.h" />
     <ClInclude Include="NameProfile.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataProducerByCount.cpp" />
+    <ClCompile Include="Filter81GoodNumber.cpp" />
     <ClCompile Include="FilterAllNameNumberForFiveElements.cpp" />
+    <ClCompile Include="FilterThreeWordsPhase.cpp" />
     <ClCompile Include="IDataProducer.cpp" />
     <ClCompile Include="ILoadSettings.cpp" />
     <ClCompile Include="IRuleFilter.cpp" />
     <ClCompile Include="LoadSettingsFromINI.cpp" />
+    <ClCompile Include="MainProcessor.cpp" />
     <ClCompile Include="NameProfile.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

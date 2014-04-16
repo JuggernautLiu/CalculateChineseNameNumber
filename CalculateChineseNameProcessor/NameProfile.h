@@ -8,6 +8,16 @@ public:
     
     NameProfile(void);
     NameProfile(int lastnamenum);
+	//NameProfile(const NameProfile&);
+	/*NameProfile& operator=(const NameProfile& rhs){
+		return* this;
+	}
+	NameProfile& operator+=(const NameProfile& rhs){
+		return* this;
+	}*/
+	bool operator==(const NameProfile& rhs) const;
+	bool operator!=(const NameProfile& rhs) const;
+	
     ~NameProfile(void);    
     
     bool FinishSetting();

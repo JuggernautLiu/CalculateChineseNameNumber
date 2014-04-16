@@ -36,7 +36,7 @@ bool DataProducerByCount::ProduceNameProfiles(vector<NameProfile> &nameprofiles)
                 NameProfile profile2(nameprofilecfg.lastname_num);
                 profile2.Set_name1_num(j);
                 profile2.Set_name2_num(i);
-                if(profile.FinishSetting()){
+                if(profile2.FinishSetting()){
                     nameprofiles.push_back(profile2);
                 }
             }

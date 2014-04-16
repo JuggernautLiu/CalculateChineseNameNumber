@@ -97,6 +97,7 @@
     </ClCompile>
     <ClCompile Include="TestDataProducer.cpp" />
     <ClCompile Include="TestLoadSettings.cpp" />
+    <ClCompile Include="TestMainProcessor.cpp" />
     <ClCompile Include="TestNameProfile.cpp" />
     <ClCompile Include="TestRuleFilter.cpp" />
     <ClCompile Include="UnitTest.cpp" />
