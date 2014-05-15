@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TestDataProducer">
+    <Position X="0.75" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TestDataProducer.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestDataProducerByCount">
+    <Position X="0.5" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TestDataProducer.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestLoadSettings">
+    <Position X="3.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAgAAAAEBAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TestLoadSettings.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestMainProcessor">
+    <Position X="6" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TestMainProcessor.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestNameProfile">
+    <Position X="3.5" Y="8" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TestNameProfile.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestRuleFilter">
+    <Position X="3" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAgAAAAgA=</HashCode>
+      <FileName>TestRuleFilter.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestFilterAllNameNumberForFiveElements">
+    <Position X="0.5" Y="3.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TestRuleFilter.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestFilter81GoodNumber">
+    <Position X="4" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TestRuleFilter.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TestFilterThreeWordsPhase">
+    <Position X="6.25" Y="3.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAgAAAAABAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>TestRuleFilter.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft JhengHei UI" Size="9" />
+</ClassDiagram>

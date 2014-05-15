@@ -28,8 +28,8 @@ TEST_F(TestMainProcessor,RUN)
 {
 	MainProcessor processor;
 	vector<NameProfile> nameprofiles;
-	int lastname = 15;
-	int lackelement = IRuleFilter::Enum_Elements::Wood;
+	int lastname = 7;
+	int lackelement = IRuleFilter::Enum_Elements::Water;
 	processor.Run(nameprofiles,lastname,lackelement);
 
 	NameProfile expectedNameProfile(15);
