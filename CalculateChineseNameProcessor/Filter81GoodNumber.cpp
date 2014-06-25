@@ -23,14 +23,16 @@ bool Filter81GoodNumber::Filter(vector<NameProfile>& nameprofiles)
 		vector<NameProfile>::iterator iter = nameprofiles.begin();
 		for(iter = nameprofiles.begin(); iter != nameprofiles.end() ; ++iter){
 			bool bNeedAdd = false;
-			int nsky = 1 + iter->Get_lastname_num();
+			//int nsky = 1 + iter->Get_lastname_num();
 			int npeople = iter->Get_lastname_num() + iter->Get_name1_num();
 			int nearth = iter->Get_name1_num() + iter->Get_name2_num();
+			int nall = iter->Get_sum_num();
+			int nout = nall - npeople + 1;
 
 			while(true)
 			{
 				vector<int>::iterator it;
-	            it = find(good81Numbers.begin(),good81Numbers.end(),nsky);
+	            it = find(good81Numbers.begin(),good81Numbers.end(),nall);
 			    if(it == good81Numbers.end()){
 					// Not in the good81Numbers
 		             break;
@@ -45,8 +47,13 @@ bool Filter81GoodNumber::Filter(vector<NameProfile>& nameprofiles)
 					// Not in the good81Numbers
 		             break;
 				}
+				it = find(good81Numbers.begin(),good81Numbers.end(),nout);
+			    if(it == good81Numbers.end()){
+					// Not in the good81Numbers
+		             break;
+				}
 
-				// nsky, npeople and nearth are all in the good81Numbers.
+				// nall, npeople and nearth are all in the good81Numbers.
 				// Add to new vector
 				Outnameprofiles.push_back(*iter);
 				break;
